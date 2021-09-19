@@ -1,0 +1,234 @@
+/* font-family: 'Montserrat', sans-serif; */
+
+/*----------------
+    Root
+-----------------*/
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+ 
+body{
+    margin: 0;
+    padding: 0;
+    display: grid; 
+    place-content: center;
+    grid-gap: 1.5em; 
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background-color: #1e2140;
+    max-height: 100vh;
+}
+
+/*-------------------
+    Typography
+--------------------*/
+.title{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+  }
+.time{
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: 10px;
+}
+.btn{
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 1rem;
+    font-weight: 900;
+    text-transform: lowercase;
+}
+.small-text{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+/* ------------------
+    Card layout
+------------------- */
+
+.card{
+    margin: 0 auto;
+    padding: 12em;
+    width: 350px;
+    height: 350px;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    background-image: linear-gradient(120deg ,#151936 ,#262b55);
+    box-shadow: -1px -2px 30px rgba(255, 255, 255, 0.1);
+}
+.card-body{
+    margin: 0;
+    padding: 0;
+    width: 340px;
+    height: 340px;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    background-color: #151932;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    opacity: 1;
+
+}
+/* --------------------
+    animation
+---------------------- */
+.progress{
+    margin: 0;
+    padding: 0;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background-color: #151932;
+    box-sizing: border-box;
+    z-index: 1;
+    opacity: 1;
+    position: relative;
+}
+.hold {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip: rect(0px, 320px, 320px, 160px);
+    border-radius: 100%;
+    background-color:#151932;
+  }
+  .fill,
+  .dot span {
+    background-color: #f87070;
+  }
+  .fill {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    clip: rect(0px, 160px, 320px, 0px);
+  }
+  .left .fill {
+    z-index: 1;
+    animation: none;
+  }
+  .right {
+      width: 100%;
+      height: 100%;
+    z-index: 3;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  .right .fill {
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      animation: none;
+  }
+  
+/* ---------------------
+    body Text
+---------------------- */
+.card-body-text{
+    margin: 7.5px ;
+    padding: 2em;
+    position: absolute;
+    width: 305px;
+    height: 305px;
+    border-radius: 50%;
+    background-color: #151932;
+    box-sizing: border-box;
+    z-index: 5;
+    opacity: 1;
+}
+/* -------------------
+    Button layout
+-------------------- */
+.btn-container{
+    margin: 0;
+    margin-bottom: 2em;
+    padding: 0.5em;
+    border-radius: 50px;
+    background-color: #151932;
+}
+.btn{
+    padding: 1em 3em;
+    border: none;
+    background: none;
+    transition: transform 250ms;
+}
+.btn:hover, 
+.btn:focus{
+    outline: none;
+    color: #151932;
+    background-color: #f87070;
+    border-radius: inherit;
+}
+.btn-active{
+    color: #151932;
+    background-color: #f87070;
+    border-radius: inherit;
+}
+
+/* -----------------
+    moblie layout
+------------------- */
+
+@media (max-width: 620px){
+    /*-------------------
+        Typography
+    --------------------*/
+    .time{
+        color: #fff;
+        font-size: 4rem;
+        font-weight: 400;
+    }
+    .btn{
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: lowercase;
+    }
+    .small-text{
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+    }
+    /* ------------------
+        Card layout
+    ------------------- */
+
+    .card{
+        margin: 0 auto;
+        padding: 11em;
+        width: 300px;
+        height: 300px;
+    }
+    .card-body{
+        width: 290px;
+        height: 290px;
+    }
+    /* -------------------
+        Button layout
+    -------------------- */
+
+    .btn{
+        padding: 1.1em 1.2em;
+    }
+  
+}

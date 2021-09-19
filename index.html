@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="Logo of Company.png">
+        <title>Scrimba Weeklychallenge || Pomodoro Time</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.css" integrity="sha512-4wfcoXlib1Aq0mUtsLLM74SZtmB73VHTafZAvxIp/Wk9u1PpIsrfmTvK0+yKetghCL8SHlZbMyEcV8Z21v42UQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+    </head>             
+    <body>
+        <h1 class="title">Pomodoro</h1>
+        <div class="btn-container">
+            <button id="pomodoroEl" class="btn btn-primary">pomodoro</button>
+            <button id="shortEl" class="btn btn-dark">Short break</button>
+            <button id="longEl" class="btn btn-light">Long break</button>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <div class="progress">
+                    <div class='hold left'>
+                        <div class='fill'></div>
+                    </div>
+                    <div class='hold right'>
+                        <div class='fill'></div>
+                    </div>
+                    <div class="card-body-text">
+                        <p id="timer" class="time">00:00</p>
+                        <p id="status" class="small-text">play</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- linked js file -->
+        <script src="js/script.js"></script>
+    </body>
+</html>
