@@ -17,7 +17,7 @@ longBtn.addEventListener('click',()=>{
 })
 
 shortBtn.addEventListener('click',()=>{
-    startTiming(1*60);
+    startTiming(5*60);
 })
 
 function startTiming(time){
