@@ -2,7 +2,7 @@ const pomodoroBtn = document.getElementById('pomodoroEl');
 const shortBtn = document.getElementById('shortEl');
 const longBtn = document.getElementById('longEl');
 const timerDisplay = document.getElementById('timer');
-const statusDisplay = document.getElementById('status'); 
+const playPause = document.getElementById('status'); 
 const leftAnimation = document.querySelector(".left .fill")
 const rightAnimation = document.querySelector(".right .fill")
 let intervalFunction
@@ -19,6 +19,10 @@ longBtn.addEventListener('click',()=>{
 shortBtn.addEventListener('click',()=>{
     startTiming(5*60);
 })
+playPause.addEventListener('click', ()=>{
+    clearInterval(intervalFunction)
+})
+
 
 function startTiming(time){
     if(typeof intervalFunction !== undefined){
@@ -26,13 +30,13 @@ function startTiming(time){
     }
     let allowedTime = time
     showTime(allowedTime)
-    statusDisplay.innerText = `pause`
+    playPause.innerText = `pause`
     animationstart(allowedTime)
     intervalFunction = setInterval(()=>{
         if(allowedTime == 0 ){
             clearInterval(intervalFunction)
             showTime(0)
-            statusDisplay.innerText = `play`
+            playPause.innerText = `play`
         }else{
             allowedTime--
             showTime(allowedTime)
